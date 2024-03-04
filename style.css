@@ -62,7 +62,7 @@ video{
 
 .scale-capture{
     animation-name: scale-capture;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-duration: 1s;
 }
 
