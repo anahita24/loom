@@ -4,6 +4,7 @@ let recordBtn = document.querySelector("record-btn");
 
 let captureBtnContainer = document.querySelector("capture-btn-cont");
 let captureBtn = document.querySelector("capture-btn");
+let recordFlag = false
 
 
 let recorder;
@@ -17,3 +18,8 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream)=>{
    video.srcObject = stream;
    recorder = new MediaRecorder(stream);
 });
+
+recordBtnContainer.addEventListener("click", ()=>{
+    if(!recorder) return;
+    recordFlag = !recordFlag;
+})
