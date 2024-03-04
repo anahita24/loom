@@ -6,6 +6,5 @@ let constraints ={
 }
 
 navigator.mediaDevices.getUserMedia(constraints).then((stream)=>{
-   console.log(stream.getVideoTracks());
    video.srcObject = stream;
 });

@@ -28,9 +28,10 @@ video{
     color: aliceblue;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
-.action-btn-cont > * {
+.action-cont > * {
     width: 100%;
     height: 5rem;
     background-color: lightcoral;
