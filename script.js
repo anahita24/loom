@@ -22,4 +22,11 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream)=>{
 recordBtnContainer.addEventListener("click", ()=>{
     if(!recorder) return;
     recordFlag = !recordFlag;
+
+    if(recordFlag){
+       recorder.start();
+    }
+    else {
+      recorder.stop();
+    }
 })
