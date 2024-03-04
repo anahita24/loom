@@ -19,7 +19,7 @@ video{
 }
 
 .action-cont{
-    height: 15rem;
+    height: 12rem;
     width: 5rem;
     position: absolute;
     top: calc( (100vh - 10rem)/2);
