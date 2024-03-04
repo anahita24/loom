@@ -36,10 +36,17 @@ video{
     background-color: lightcoral;
     border-radius: 50%;
     border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .record-btn{
   background-color: red;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+
 }
 
 .capture-btn{
