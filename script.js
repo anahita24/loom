@@ -25,8 +25,10 @@ recordBtnContainer.addEventListener("click", ()=>{
 
     if(recordFlag){
        recorder.start();
+       recordBtn.classList.add("scale-record");
     }
     else {
       recorder.stop();
+      recordBtn.classList.remove("scale-record");
     }
 })
