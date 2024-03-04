@@ -60,8 +60,23 @@ video{
     animation-duration: 1s;
 }
 
+.scale-capture{
+    animation-name: scale-capture;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
 @keyframes scale-record {
-    0% {
+    0%{
+        transform: scale(0.8);
+    }
+    100%{
+       transform: scale(1.1);
+    }
+}
+
+@keyframes scale-capture {
+    0%{
         transform: scale(0.8);
     }
     100%{
