@@ -17,6 +17,9 @@ let constraints ={
 navigator.mediaDevices.getUserMedia(constraints).then((stream)=>{
    video.srcObject = stream;
    recorder = new MediaRecorder(stream);
+   recorder.addEventListener("dataavailable", (e)=>{
+    chunks.push(e.data);
+   })
 });
 
 recordBtnContainer.addEventListener("click", ()=>{
