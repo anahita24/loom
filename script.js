@@ -54,13 +54,16 @@ captureBtnContainer.addEventListener("click", (e) => {
 })
 
 let timerID;
+let counter=0;
+let timer = document.querySelector(".timer");
 function startTimer(){
   function displayTimer(){
-
+    counter ++;
   }
    timerID = setInterval(displayTimer,1000);
 }
 
 function stopTimer(){
   clearInterval(timerID);
+  timer.innerText = "00:00:00";
 }
