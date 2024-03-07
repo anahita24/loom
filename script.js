@@ -52,3 +52,11 @@ recordBtnContainer.addEventListener("click", ()=>{
 captureBtnContainer.addEventListener("click", (e) => {
   captureBtn.classList.add("scale-capture");
 })
+
+function startTimer(){
+
+}
+
+function stopTimer(){
+  
+}
