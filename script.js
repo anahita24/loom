@@ -53,10 +53,14 @@ captureBtnContainer.addEventListener("click", (e) => {
   captureBtn.classList.add("scale-capture");
 })
 
+let timerID;
 function startTimer(){
+  function displayTimer(){
 
+  }
+   timerID = setInterval(displayTimer,1000);
 }
 
 function stopTimer(){
-  
+  clearInterval(timerID);
 }
