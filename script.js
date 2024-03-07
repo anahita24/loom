@@ -46,3 +46,8 @@ recordBtnContainer.addEventListener("click", ()=>{
       recordBtn.classList.remove("scale-record");
     }
 })
+
+
+captureBtnCont.addEventListener("click", (e) => {
+  captureBtn.classList.add("scale-capture");
+})
