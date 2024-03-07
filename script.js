@@ -30,6 +30,7 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream)=>{
     let a = document.createElement('a');
     a.href = videoURL;
     a.download = "stream.mp4";
+    a.click();
    })
 });
 
@@ -48,6 +49,6 @@ recordBtnContainer.addEventListener("click", ()=>{
 })
 
 
-captureBtnCont.addEventListener("click", (e) => {
+captureBtnContainer.addEventListener("click", (e) => {
   captureBtn.classList.add("scale-capture");
 })
