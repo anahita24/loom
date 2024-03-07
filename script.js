@@ -24,6 +24,12 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream)=>{
     chunks.push(e.data);
    })
    recorder.addEventListener("stop", ()=>{
+    let blob = new Blob(chunks, { type: "video/mp4"});
+    let videoURL = URL.createObjectURL(blob);
+
+    let a = document.createElement('a');
+    a.href = videoURL;
+    a.download = stream;
    })
 });
 
