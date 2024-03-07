@@ -29,7 +29,7 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream)=>{
 
     let a = document.createElement('a');
     a.href = videoURL;
-    a.download = stream;
+    a.download = "stream.mp4";
    })
 });
 
