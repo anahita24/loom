@@ -56,24 +56,29 @@ captureBtnContainer.addEventListener("click", (e) => {
 })
 
 let timerID;
-let counter=0;
+let counter = 0;
+
 let timer = document.querySelector(".timer");
+
 function startTimer(){
   let totalSeconds = counter;
+
   function displayTimer(){
     let hours = Number.parseInt(totalSeconds /3600);
     totalSeconds = totalSeconds % 3600;
     let minutes = Number.parseInt(totalSeconds/ 60);
-    let seconds = totalSeconds;
 
-    hours = (hours < 10) ? `0${minutes}`: minutes;
+    let seconds = totalSeconds % 60;
+
+    hours = (hours < 10) ? `0${hours}`: hours;
     minutes = (minutes < 10) ? `0${minutes}`: minutes;
     seconds = (seconds < 10) ? `0${seconds}`: seconds;
 
 
-    timer.innerText = `${hours}: ${minutes} : ${seconds}`;
+    timer.innerText = `${hours}:${minutes}:${seconds}`;
     counter++;
   }
+
    timerID = setInterval(displayTimer,1000);
 }
 
