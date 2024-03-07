@@ -57,8 +57,15 @@ let timerID;
 let counter=0;
 let timer = document.querySelector(".timer");
 function startTimer(){
+  let totalSeconds = counter;
   function displayTimer(){
-    counter ++;
+    let hours = Number.parseInt(totalSeconds /3600);
+    totalSeconds = totalSeconds % 3600;
+    let minutes = Number.parseInt(totalSeconds/ 60);
+    let seconds = totalSeconds;
+
+    timer.innerText = `${hours}: ${minutes} : ${seconds}`;
+    counter++;
   }
    timerID = setInterval(displayTimer,1000);
 }
