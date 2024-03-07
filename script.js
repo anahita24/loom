@@ -64,6 +64,11 @@ function startTimer(){
     let minutes = Number.parseInt(totalSeconds/ 60);
     let seconds = totalSeconds;
 
+    hours = (hours < 10) ? `0${minutes}`: minutes;
+    minutes = (minutes < 10) ? `0${minutes}`: minutes;
+    seconds = (seconds < 10) ? `0${seconds}`: seconds;
+
+
     timer.innerText = `${hours}: ${minutes} : ${seconds}`;
     counter++;
   }
