@@ -19,6 +19,7 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream)=>{
    recorder = new MediaRecorder(stream);
    recorder.addEventListener("start", (e)=>{
     chunks = [];
+    startTimer();
    })
    recorder.addEventListener("dataavailable", (e)=>{
     chunks.push(e.data);
@@ -31,6 +32,7 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream)=>{
     a.href = videoURL;
     a.download = "stream.mp4";
     a.click();
+    stopTimer();
    })
 });
 
