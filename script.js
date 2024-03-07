@@ -86,4 +86,5 @@ function stopTimer() {
     clearInterval(timerID);
     timer.innerText = "00:00:00";
     timer.style.display = "none";
+    counter = 0;
 }
