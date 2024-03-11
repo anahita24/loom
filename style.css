@@ -105,4 +105,7 @@ video{
     height: 4rem;
     width: 5rem;
     background-image: url("https://picsum.photos/seed/picsum/200/300");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
