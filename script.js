@@ -5,6 +5,7 @@ let recordBtn = document.querySelector(".record-btn");
 let captureBtnContainer = document.querySelector(".capture-btn-cont");
 let captureBtn = document.querySelector(".capture-btn");
 let recordFlag = false
+let transparentColor = "transparent";
 let chunks = [];
 
 let recorder;
@@ -59,9 +60,9 @@ captureBtnContainer.addEventListener("click", (e) => {
 
   let tool = canvas.getContext('2d');
   tool.drawImage(video, 0, 0, canvas.width, canvas.height);
-  tool.fillStyle = color;
+  tool.fillStyle = transparentColor;
   tool.fillRect(0, 0, canvas.width, canvas.height);
-  
+
   let imageUrl = canvas.toDataURL();
   let a = document.createElement('a');
   a.href = imageUrl;
