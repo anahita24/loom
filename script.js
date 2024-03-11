@@ -59,7 +59,9 @@ captureBtnContainer.addEventListener("click", (e) => {
 
   let tool = canvas.getContext('2d');
   tool.drawImage(video, 0, 0, canvas.width, canvas.height);
-
+  tool.fillStyle = color;
+  tool.fillRect(0, 0, canvas.width, canvas.height);
+  
   let imageUrl = canvas.toDataURL();
   let a = document.createElement('a');
   a.href = imageUrl;
