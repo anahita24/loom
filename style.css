@@ -100,3 +100,9 @@ video{
     width: 5rem;
     background-color: aqua;
 }
+
+.filter{
+    height: 4rem;
+    width: 5rem;
+    background-image: url("https://picsum.photos/seed/picsum/200/300");
+}
