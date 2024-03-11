@@ -58,7 +58,13 @@ captureBtnContainer.addEventListener("click", (e) => {
   canvas.height = video.videoHeight;
 
   let tool = canvas.getContext('2d');
-  tool.drawImage(video, )
+  tool.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+  let imageUrl = canvas.toDataURL();
+  let a = document.createElement('a');
+  a.href = imageUrl;
+  a.download = "image.jpg";
+  a.click();
 })
 
 let timerID;
