@@ -53,6 +53,12 @@ recordBtnContainer.addEventListener("click", ()=>{
 
 captureBtnContainer.addEventListener("click", (e) => {
   captureBtn.classList.add("scale-capture");
+  let canvas = document.createElement("canvas");
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight;
+
+  let tool = canvas.getContext('2d');
+  tool.drawImage(video, )
 })
 
 let timerID;
